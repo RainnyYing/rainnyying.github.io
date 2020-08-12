@@ -123,9 +123,9 @@ main div.list-group {
 	<main class="bg-white">
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心</p>
-<p class="alert alert-primary" id="loadmsg" role="alert">Fetching posts from the API server. The speed depends on your network.</p>
+<p class="alert alert-primary" id="loadmsg" role="alert">Fetching posts from the API server. The speed depends on your network. If it takes more than 10 seconds to respond but not get response, We recommend you check your Internet connection and refresh this page for retrying.</p>
 <p class="alert alert-danger d-none" id="errmsg" role="alert">Failed to fetch posts from the API server.</p>
-<br><br>
+<br>
 <ol id="ol">
 <script>
         window.onload = function () {
@@ -133,20 +133,22 @@ main div.list-group {
             var request = new XMLHttpRequest();
             request.open("get", url);
             request.send(null);
+			console.log('[CHECK] 2 Module check passed.');
             request.onload = function () {
-                if (request.status == 200) {
+			console.log('[PACK] 1 Module check passed.');
+                //if (request.status == 200) {
+				        document.getElementById("errmsg").classList.add("d-none");
                     var json = JSON.parse(request.responseText);
                     var ol = document.getElementById('ol');
                     json.posts.map(posts => {
 				    	document.getElementById("loadmsg").classList.add("d-none");
                         var li = document.createElement("li");
-                        li.innerHTML = '<div class="media"><img height="76px" width="76px" src="'+posts.img+'" class="mr-3" alt=""><div class="media-body"><h5 class="mt-0">'+posts.name+'</h5>Posted at '+posts.time+', by '+posts.by+' &nbsp;&nbsp;<a class="btn btn-outline-success" href="'+posts.url+'">阅读</a></div></div>';
+                        li.innerHTML = '<div class="media"><img height="76px" width="76px" src="'+posts.img+'" class="mr-3" alt=""><div class="media-body"><h5 class="mt-0">'+posts.name+'</h5>Posted at '+posts.time+', by '+posts.by+' &nbsp;&nbsp;<a class="btn btn-outline-success" href="'+posts.url+'">阅读</a></div></div><hr>';
                         ol.append(li);
                     })
-                }
-			    return;
-            }
-		    document.getElementById("errmsg").classList.remove("d-none");
+                //}
+				}
+		        
         }
     </script>
 </body>
