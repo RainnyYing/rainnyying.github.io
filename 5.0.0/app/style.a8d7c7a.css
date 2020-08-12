@@ -1,0 +1,6 @@
+@font-face{font-family:Minecraft;src:url(b302ddbcba41edd860d13c5d003991e2.woff2) format("woff2"),url(2b22c6d6a4051b5e51fcb1d9dd7194ef.woff) format("woff")}
+.bs-avatar{width:2.1rem;height:2.1rem;image-rendering:pixelated;border-radius:2px;filter:drop-shadow(0 4px 4px rgba(0,0,0,.3))}
+.dropdown-item:focus,.dropdown-item:hover{color:#fff;background-color:var(--blue)}.dropdown-item.dropdown-item-danger{color:var(--danger)}.dropdown-item.dropdown-item-danger:focus,.dropdown-item.dropdown-item-danger:hover{color:#fff;background-color:var(--danger)}
+.login-logo a{font-family:Minecraft;transition:all .2s ease-in-out}.login-logo a:hover{color:#42a5f5}
+#chart{width:100%;height:400px}.btn-color{width:40px;height:20px;cursor:pointer}
+a{outline:none}.brand-link,.navbar-brand{font-family:Minecraft}.breadcrumb{font-size:14px}.user-panel .info{cursor:default}aside [data-mark=nickname]{margin-left:1px}
