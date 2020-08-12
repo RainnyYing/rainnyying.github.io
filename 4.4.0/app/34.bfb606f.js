@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{386:function(e,n,c){"use strict";function o(e){document.body.className=document.body.className.replace(/skin-\w+(?:-light)?/,e.target.value)}c.r(n);const t=document.querySelector("#change-color");t&&t.addEventListener("change",o),n.default=o}}]);
