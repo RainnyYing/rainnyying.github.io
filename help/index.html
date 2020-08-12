@@ -123,8 +123,8 @@ main div.list-group {
 	<main class="bg-white">
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心</p>
-<p class="alert alert-primary" id="loadmsg" role="alert">Fetching posts from the API server. The speed depends on your network. If it takes more than 10 seconds to respond but not get response, We recommend you check your Internet connection and refresh this page for retrying.</p>
-<p class="alert alert-danger d-none" id="errmsg" role="alert">Failed to fetch posts from the API server.</p>
+<p class="alert alert-primary" id="loadmsg" role="alert">正在从 API 服务器读取文章列表，请耐心等待。</p>
+<p class="alert alert-danger d-none" id="errmsg" role="alert">无法与 API 服务器联系。</p>
 <br>
 <ol id="ol">
 <script>
@@ -134,6 +134,10 @@ main div.list-group {
             request.open("get", url);
             request.send(null);
 			console.log('[CHECK] 2 Module check passed.');
+	    if(!request.onolad){
+		    document.getElementById("loadmsg").classList.add("d-none");
+		    document.getElementById("errmsg").classList.remove("d-none");
+	    }
             request.onload = function () {
 			console.log('[PACK] 1 Module check passed.');
                 //if (request.status == 200) {
