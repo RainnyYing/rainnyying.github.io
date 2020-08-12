@@ -1,6 +1,5 @@
 {
-    "id": {"1","2"},
-    "name": {"How to configure Blessing Skin CDN?","How to install Blessing Skin Server on your server?"},
-    "url": {"https://help.paperjun.xyz/howto:blessingskin-cdn-config.html","https://paperjun.xyz"},
-    "time": {"Beijing Time 2020/08/12","Beijing Time 2020/08/11"}
+    "posts":[
+        { "name": "Just A Name"   , "url" : "Just A URL" }
+    ]
 }
