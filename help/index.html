@@ -139,12 +139,13 @@ main div.list-group {
                     var ol = document.getElementById('ol');
                     json.posts.map(posts => {
 				    	document.getElementById("loadmsg").classList.add("d-none");
-						document.getElementById("errmsg").classList.add("d-none");
                         var li = document.createElement("li");
                         li.innerHTML = '<div class="media"><img height="76px" width="76px" src="'+posts.img+'" class="mr-3" alt=""><div class="media-body"><h5 class="mt-0">'+posts.name+'</h5>Posted at '+posts.time+', by '+posts.by+' &nbsp;&nbsp;<a class="btn btn-outline-success" href="'+posts.url+'">阅读</a></div></div>';
                         ol.append(li);
                     })
+					return;
                 }
+				document.getElementById("errmsg").classList.remove("d-none");
             }
         }
     </script>
