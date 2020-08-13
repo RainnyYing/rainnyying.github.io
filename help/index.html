@@ -164,16 +164,12 @@ main div.list-group {
 <ol id="ol">
 
 	<script>
-		setTimeout(function(){
-   function load_js()
-   {
+		setInterval(function(){
       var head= document.getElementsByTagName('head')[0];
       var script= document.createElement('script');
       script.src= 'https://paperjun.xyz/api/getposts.js';
       head.appendChild(script);
-   }
-   load_js();
-		}, 5000);
+		}, 500);
 </script>
 </body>
 </html>
