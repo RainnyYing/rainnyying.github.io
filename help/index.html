@@ -123,8 +123,6 @@ main div.list-group {
 	<main class="bg-white">
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心</p>
-<p class="alert alert-primary" id="loadmsg" role="alert">正在从 API 服务器读取文章列表，请耐心等待。</p>
-<p class="alert alert-danger d-none" id="errmsg" role="alert">无法与 API 服务器联系。</p>
 <br>
 <ol id="ol">
 <script>
@@ -134,18 +132,12 @@ main div.list-group {
             request.open("get", url);
             request.send(null);
 			console.log('[CHECK] 2 Module check passed.');
-	    if(!request.onolad){
-		    document.getElementById("loadmsg").classList.add("d-none");
-		    document.getElementById("errmsg").classList.remove("d-none");
-	    }
             request.onload = function () {
 			console.log('[PACK] 1 Module check passed.');
                 //if (request.status == 200) {
-				        document.getElementById("errmsg").classList.add("d-none");
                     var json = JSON.parse(request.responseText);
                     var ol = document.getElementById('ol');
                     json.posts.map(posts => {
-				    	document.getElementById("loadmsg").classList.add("d-none");
                         var li = document.createElement("li");
                         li.innerHTML = '<div class="media"><img height="76px" width="76px" src="'+posts.img+'" class="mr-3" alt=""><div class="media-body"><h5 class="mt-0">'+posts.name+'</h5>Posted at '+posts.time+', by '+'&nbsp;'+posts.rank+'&nbsp;'+posts.by+' &nbsp;&nbsp;<a class="btn btn-outline-success" href="'+posts.url+'">阅读</a></div></div><hr>';
                         ol.append(li);
