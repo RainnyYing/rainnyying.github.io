@@ -124,6 +124,7 @@ main div.list-group {
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心</p>
 <br>
+		<center><p class="d-none" id="loading"><i class="fa fa-hourglass-end fa-2" aria-hidden="true"></i> Loading...</p></center>
 		<div id="onloadview"></div>
 <script>
 	setInterval(function(){
@@ -133,12 +134,14 @@ main div.list-group {
 	</script>
 	<script>
 		setInterval(function(){
+	    document.getElementById("loading").classList.remove("d-none");
             var url = "https://paperjun.xyz/xyz.paperjun.help/API.getposts.json"
             var request = new XMLHttpRequest();
             request.open("get", url);
             request.send(null);
 			console.log('[CHECK] 2 Module check passed.');
             request.onload = function () {
+		    document.getElementById("loading").classList.add("d-none");
 			console.log('[PACK] 1 Module check passed.');
                 //if (request.status == 200) {
                     var json = JSON.parse(request.responseText);
