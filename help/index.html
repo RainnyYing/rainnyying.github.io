@@ -155,17 +155,15 @@ main div.list-group {
 		}
 		setInterval(function(){
 	    loadposts();
-		}, 10000);
+	var onloadview = document.getElementById('onloadview');
+	onloadview.innerHTML = "<ol id='ol'>";
+	}, 10000);
+		
 			/////Try to view posts when opened this page.
 			        loadposts();
 				var onloadview = document.getElementById('onloadview');
 	                        onloadview.innerHTML = "<ol id='ol'>";
 		//Try ==== END ==== //
-			document.getElementById("loading").classList.remove("d-none");
-	setInterval(function(){
-	var onloadview = document.getElementById('onloadview');
-	onloadview.innerHTML = "<ol id='ol'>";
-	}, 10000);
 		</script>
 </body>
 </html>
