@@ -127,14 +127,15 @@ main div.list-group {
 		<center><p class="d-none" id="loading"><i class="fa fa-hourglass-end fa-2" aria-hidden="true"></i> Loading...</p></center>
 		<div id="onloadview"></div>
 <script>
+	document.getElementById("loading").classList.remove("d-none");
 	setInterval(function(){
 	var onloadview = document.getElementById('onloadview');
 	onloadview.innerHTML = "<ol id='ol'>";
 	}, 10000);
 	</script>
 	<script>
-		setInterval(function(){
-	    document.getElementById("loading").classList.remove("d-none");
+		function loadposts(){
+			document.getElementById("loading").classList.remove("d-none");
             var url = "https://paperjun.xyz/xyz.paperjun.help/API.getposts.json"
             var request = new XMLHttpRequest();
             request.open("get", url);
@@ -153,6 +154,9 @@ main div.list-group {
                     })
                 //}
 	    }
+		}
+		setInterval(function(){
+	    loadposts();
 		}, 10000);
 </script>
 </body>
