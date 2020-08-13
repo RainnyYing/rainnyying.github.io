@@ -125,14 +125,14 @@ main div.list-group {
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心</p>
 <br>
-		<h3 class="d-none d-sm-block"><center><p class="d-none" id="loading"><i class="fa fa-hourglass-end fa-2" aria-hidden="true"></i> Loading...</p></center></h3>
+		<h3 class="d-none d-sm-block"><center><p class="d-none" id="loading"><i class="fa fa-hourglass-end fa-2" aria-hidden="true"></i> Please wait <60, >5 seconds...</p></center></h3>
 		<div id="onloadview"></div>
 <script>
 	document.getElementById("loading").classList.remove("d-none");
 	setInterval(function(){
 	var onloadview = document.getElementById('onloadview');
 	onloadview.innerHTML = "<ol id='ol'>";
-	}, 10000);
+	}, 5000);
 	</script>
 	<script>
 		function loadposts(){
@@ -156,10 +156,9 @@ main div.list-group {
                 //}
 	    }
 		}
-		loadposts();
 		setInterval(function(){
 	    loadposts();
-		}, 10000);
+		}, 5000);
 </script>
 </body>
 </html>
