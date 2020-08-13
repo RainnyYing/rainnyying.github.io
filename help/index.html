@@ -127,15 +127,6 @@ main div.list-group {
 <br>
 		<h3 class="d-none d-sm-block"><center><p class="d-none" id="loading"><i class="fa fa-hourglass-end fa-2" aria-hidden="true"></i> 正在加载，这<b>可能</b>需要很长时间，速度取决于您的网络。</p></center></h3>
 		<div id="onloadview"></div>
-<script>
-	var onloadview = document.getElementById('onloadview');
-	onloadview.innerHTML = "<ol id='ol'>";
-	document.getElementById("loading").classList.remove("d-none");
-	setInterval(function(){
-	var onloadview = document.getElementById('onloadview');
-	onloadview.innerHTML = "<ol id='ol'>";
-	}, 10000);
-	</script>
 	<script>
 		function loadposts(){
 			document.getElementById("loading").classList.remove("d-none");
@@ -161,6 +152,16 @@ main div.list-group {
 		setInterval(function(){
 	    loadposts();
 		}, 10000);
-</script>
+			/////Try to view posts when opened this page.
+			        loadposts();
+				var onloadview = document.getElementById('onloadview');
+	                        onloadview.innerHTML = "<ol id='ol'>";
+		//Try ==== END ==== //
+			document.getElementById("loading").classList.remove("d-none");
+	setInterval(function(){
+	var onloadview = document.getElementById('onloadview');
+	onloadview.innerHTML = "<ol id='ol'>";
+	}, 10000);
+		</script>
 </body>
 </html>
