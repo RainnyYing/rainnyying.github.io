@@ -1,6 +1,6 @@
 {
     "posts":[
         { "id": "1", "url" : "https://help.paperjun.xyz/howto:blessingskin-cdn-config.html", "name" : "如何使用本镜像站的 BlessingSkin CDN？", "time" : "Beijing Time 2020/08/12", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=red>Coffeeyuki</font>", "rank" : "<font color=red>[OWNER]</font>" },
-        { "id": "2", "url" : "https://help.paperjun.xyz/howto:blessingskin-cdn-config.html", "name" : "[USELESS] 这是个测试链接，没用处", "time" : "Beijing Time 2020/08/12", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=red>Coffeeyuki</font>", "rank" : "<font color=red>[OWNER]</font>" }
+        { "id": "2", "url" : "https://help.paperjun.xyz/howto:blessingskin-update-source-usage.html", "name" : "如何使用本镜像站的 BlessingSkin 更新源？", "time" : "Beijing Time 2020/08/13", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=red>Coffeeyuki</font>", "rank" : "<font color=red>[OWNER]</font>" }
     ]
 }
