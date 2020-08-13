@@ -124,8 +124,13 @@ main div.list-group {
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心</p>
 <br>
-<ol id="ol">
-
+		<div id="onloadview"></div>
+<script>
+	setInterval(function(){
+	var onloadview = document.getElementById('onloadview');
+	onloadview.innerHTML = "<ol id='ol'>";
+	}, 10000);
+	</script>
 	<script>
 		setInterval(function(){
             var url = "https://paperjun.xyz/xyz.paperjun.help/API.getposts.json"
