@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://paperjun.xyz/static/font-awesome.min.css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=800">	<meta name="description" content="Blessing Skin Server Mirror Helpcenter">
 	<meta name="keywords" content="PaperJun,Coffeeyuki,BlessingSkin,Blessing Skin Server, Blessing Skin Server Mirror">
@@ -104,6 +103,127 @@ main div.list-group {
 }
 
 	</style>
+	<style>
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+}
+.loader:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.circular {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@-webkit-keyframes color {
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
+}
+@keyframes color {
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
+}
+body {
+  background-color: #eee;
+}
+
+.showbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5%;
+}
+</style>
 	<meta name="theme-color" content="#ffffff">
 </head>
 <body class="bg-light">
@@ -125,7 +245,7 @@ main div.list-group {
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心，每过一分钟会刷新此列表。</p>
 <br>
-		<h3 class="d-none d-sm-block"><center><p class="d-none" id="loading"><i class="fa fa-hourglass-end fa-2" aria-hidden="true"></i> 正在加载，这<b>可能</b>需要很长时间，速度取决于您的网络。</p></center></h3>
+		<h3 class="d-none d-sm-block"><center><p class="d-none" id="loading"><div class="showbox"><div class="loader"> Processing...</p></center></h3>
 		<div id="onloadview"></div>
 	<script>
 		function loadposts(){
@@ -154,12 +274,13 @@ main div.list-group {
 	var onloadview = document.getElementById('onloadview');
 	onloadview.innerHTML = "<ol id='ol'>";
 	}, 60000);
-		
+		setTimeout(function(){
 			/////Try to view posts when opened this page.
 			        loadposts();
 				var onloadview = document.getElementById('onloadview');
 	                        onloadview.innerHTML = "<ol id='ol'>";
 		//Try ==== END ==== //
+		}, 30500);
 		</script>
 </body>
 </html>
