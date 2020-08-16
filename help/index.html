@@ -245,11 +245,13 @@ body {
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心，每过一分钟会刷新此列表。</p>
 <br>
-		<div class="" id="s3"><h3 class="d-none d-sm-block"><center><div class="loader">
+		<div class="" id="s3"><h3 class="d-sm-block"><center><div class="loader">
 <svg class="circular" viewBox="25 25 50 50">
 <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
 </svg>
 			</div> Processing...</center></h3></div>
+		<div class="" id="errorcenter"><h3 class="d-sm-block"><center><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-alert mr-2 color-gray-7 hide-sm" aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" version="1.1"><path fill-rule="evenodd" d="M 8.22 1.754 a 0.25 0.25 0 0 0 -0.44 0 L 1.698 13.132 a 0.25 0.25 0 0 0 0.22 0.368 h 12.164 a 0.25 0.25 0 0 0 0.22 -0.368 L 8.22 1.754 Z m -1.763 -0.707 c 0.659 -1.234 2.427 -1.234 3.086 0 l 6.082 11.378 A 1.75 1.75 0 0 1 14.082 15 H 1.918 a 1.75 1.75 0 0 1 -1.543 -2.575 L 6.457 1.047 Z M 9 11 a 1 1 0 1 1 -2 0 a 1 1 0 0 1 2 0 Z m -0.25 -5.25 a 0.75 0.75 0 0 0 -1.5 0 v 2.5 a 0.75 0.75 0 0 0 1.5 0 v -2.5 Z" /></svg>
+			</div> <font color="red">Unable to load the list of posts.</font></center</h3></div>
 		<div id="onloadview"></div>
 	<script>
 		function loadposts(){
@@ -274,7 +276,22 @@ body {
                 //}
 	    }
 		}
+		function status(){
+					fetch("https://paperjun.xyz/xyz.paperjun.help/API.getposts.json", {
+			cache: "no-cache",
+			mode: "cors"
+		})
+			.then(response => response.json())
+			.then(status => {
+				if (versionInfo.build_number == -1){
+		    document.getElementById("s3").classList.add("d-none");
+		    document.getElementById("errorcenter").classList.remove("d-none");
+					return;
+				}
+			});
+		}
 		setInterval(function(){
+			status();
 	    loadposts();
 	var onloadview = document.getElementById('onloadview');
 	onloadview.innerHTML = "<ol id='ol'>";
