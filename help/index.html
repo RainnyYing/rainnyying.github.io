@@ -245,7 +245,7 @@ body {
 <strong>BlessingSkin Mirror 支持中心</strong><small></small><hr>
 <p class="alert alert-success" role="alert">欢迎访问 Blessing Skin Server Mirror 支持中心，每过一分钟会刷新此列表。</p>
 <br>
-		<h3 class="d-none d-sm-block" id="strong3loading"><center><div class="loader">
+		<h3 class="d-none d-sm-block" id="s3"><center><div class="loader">
 <svg class="circular" viewBox="25 25 50 50">
 <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
 </svg>
@@ -259,7 +259,7 @@ body {
             request.send(null);
 			console.log('[CHECK] 2 Module check passed.');
             request.onload = function () {
-		    document.getElementById("strong3loading").classList.add("d-none");
+		    document.getElementById("s3").classList.add("d-none");
 			console.log('[PACK] 1 Module check passed.');
                 //if (request.status == 200) {
                     var json = JSON.parse(request.responseText);
@@ -280,7 +280,7 @@ body {
 		setTimeout(function(){
 			/////Try to view posts when opened this page.
 			        loadposts();
-			        document.getElementById("strong3loading").classList.remove("d-none");
+			        document.getElementById("s3").classList.add("d-none");
 				var onloadview = document.getElementById('onloadview');
 	                        onloadview.innerHTML = "<ol id='ol'>";
 		//Try ==== END ==== //
