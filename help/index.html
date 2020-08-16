@@ -259,7 +259,6 @@ body {
 			<font color="red">Unable to load the list of posts.</font></center></h3></div>
 		<div id="onloadview"></div>
 	<script>
-		suspend();
 		function loadposts(){
 			
 		    document.getElementById("s3").classList.remove("d-none");
@@ -282,28 +281,6 @@ body {
                 //}
 	    }
 		}
-		////////////////////////////////////////////
-				function suspend(){
-            var surl = "https://paperjun.xyz/xyz.paperjun.help/API.getposts.json"
-            var srequest = new XMLHttpRequest();
-            srequest.open("get", surl);
-            srequest.send(null);
-			console.log('[CHECK] 2 Module check passed.');
-            srequest.onload = function () {
-		    document.getElementById("s3").classList.add("d-none");
-			console.log('[PACK] 1 Module check passed.');
-                //if (request.status == 200) {
-                    var json = JSON.parse(srequest.responseText);
-                    var sol = document.getElementById('suspend-log');
-                    json.suspended.map(suspended => {
-                        var sli = document.createElement("sli");
-                        sli.innerHTML = '<h2>'+suspended.title+'</h2><h4>'+suspended.time+'</h4><p>'+suspended.description+'</p><BR><BR>'+suspended.rank+'&nbsp;'+suspended.postedby+'';
-                        sol.append(li);
-                    })
-                //}
-	    }
-		}
-		////////////////////////////////////////////////////
 		function status(){
 					fetch("https://paperjun.xyz/xyz.paperjun.help/API.getposts.json", {
 			cache: "no-cache",
