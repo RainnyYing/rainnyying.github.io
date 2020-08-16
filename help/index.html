@@ -288,7 +288,7 @@ body {
 		})
 			.then(response => response.json())
 			.then(status => {
-				if (versionInfo.build_number == -1){
+				if (status.number == -1){
 		    document.getElementById("s3").classList.add("d-none");
 		    document.getElementById("errorcenter").classList.remove("d-none");
 					return;
