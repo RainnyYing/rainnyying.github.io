@@ -3,6 +3,9 @@
     "posts":[
         { "id": "1", "url" : "https://help.paperjun.xyz/howto:blessingskin-cdn-config.html", "name" : "如何使用本镜像站的 BlessingSkin CDN？", "time" : "Beijing Time 2020/08/12", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=red>Coffeeyuki</font>", "rank" : "<font color=red>[OWNER]</font>" },
         { "id": "2", "url" : "https://help.paperjun.xyz/howto:blessingskin-update-source-usage.html", "name" : "如何使用本镜像站的 BlessingSkin 更新源？", "time" : "Beijing Time 2020/08/13", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=red>Coffeeyuki</font>", "rank" : "<font color=red>[OWNER]</font>" },
-        { "id": "3", "url" : "#", "name" : "<font color=orange>Final Debugging</font>", "time" : "Beijing Time 2020/08/14", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=purple>Terminal</font>", "rank" : "<font color=purple>[PIG]</font>" }
+        { "id": "3", "url" : "#", "name" : "<font color=orange>Final Debugging</font>", "time" : "Beijing Time 2020/08/14", "img" : "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1359011957,2812612685&fm=26&gp=0.jpg", "by" : "<font color=purple>Terminal</font>", "rank" : "<font color=purple>[SYSTEM]</font>" }
+    ],
+    "suspended": [
+        { "time": "Beijing Time 2020/08/16 23:14", "title": "[FIXED] Cloudflare 线路中断", "description": "在上述的时间，Cloudflare 的 某个地区的服务器出现了 502 (502 Bad gateway) 的错误。情况持续了 将近5分钟 。现已恢复。事发服务器地理位置：中国 台湾省台中市 。", "postedby": "<font color=purple>Cloudflare Services Monitor</font>", "rank": "<font color=purple>[SYSTEM]</font>", "msgcolor": "orange" }
     ]
 }
