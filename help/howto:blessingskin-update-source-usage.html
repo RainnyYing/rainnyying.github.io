@@ -138,5 +138,24 @@ main div.list-group {
 	Posted at: 2020/08/13, China Beijing Time<br>
         Last Update: 2020/08/13, China Beijing Time #P19A<br>
 	Tag(s): <img src="https://blessing-skin-manual.vercel.app/api/update?url=https://paperjun.xyz/blessingskin.json">
+	<br><br>
+	<div id="container"></div>
 </body>
+
+  <script src="https://help.paperjun.xyz/commentsystem/csbrowser.js"></script>
+  <script>
+    var clientId = '9e70dc03ea8d69463d66'
+    var clientSecret = 'd6288f484b9a1efda0ac1720a80d50e72d642b57'
+    var gitment = new Gitment({
+      id: 'demo page',
+      owner: 'imsun',
+      repo: 'gitment',
+      oauth: {
+        client_id: clientId,
+        client_secret: clientSecret,
+      },
+    })
+
+    gitment.render('container')
+  </script>
 </html>
