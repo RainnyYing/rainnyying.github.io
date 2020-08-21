@@ -112,48 +112,39 @@ main div.list-group {
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active nav-link">
-					Helpcenter <span class="sr-only">(current)</span>
-				</li>
-							</ul>
-		</div>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a class="nav-link" href="https://help.paperjun.xyz">Helpcenter</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="https://blog.paperjun.xyz">Blog</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://paperjun.xyz">BSS Mirror</a>
+</li>
+</ul>
+</div>
 	</nav>
 	<main class="bg-white">
-<strong>BlessingSkin Mirror 支持中心</strong> / 使用 / <small>如何使用本镜像站的 BlessingSkin CDN？</small><hr>
-<h3 class="d-none d-sm-block">如何使用本镜像站的 BlessingSkin CDN？</h3>
-<br>
-<p>为了让性能低的服务器减轻负担（或者服务器宽带低的减少网络占用），此镜像站已推出了 BlessingSkin 静态资源托管。</p>
-<p>资源链接：<code>https://paperjun.xyz/::version/</code><ul><li>注意，此 URL 链接中的 <code>::version</code> 请替换成您的 BlessingSkin 版本。</li><li>支持的 BlessingSkin 版本：<code>4.0.0 | 4.0.1 | 4.0.2 | 4.0.3 | 4.0.4 | 4.3.6 | 4.4.0 | 5.0.0</code></li><li>注意，不支持 RC 、 Pre-Release 、 Beta 以及 Alpha 版的 BlessingSkin。</li></ul></p>
-<div class="card">
-  <div class="card-body">
-    如果您在使用的时候遇到了问题，请联系 QQ 3117838233，并在第三个问题的答案写入：“BlessingSkin CDN 反馈”。谢谢您的阅读！
-  </div>
-</div><BR>
-	<b>注意！</b> 由于使用了 Cloudflare 的 Free plan，部分地区可能无法连接到本镜像站。如果您想帮助此镜像站的网速变得更快，欢迎通过上方的 QQ 与我联系，谢谢。我会将 Cloudflare 的 plan 升级到 Pro，或者更高。
-	
-  <hr>
-	Author: <font color=red>[OWNER] Coffeeyuki</font><br>
-	Posted at: 2020/08/12, China Beijing Time<br>
-        Last Update: 2020/08/14, China Beijing Time<br>
-	Tag(s): <img src="https://blessing-skin-manual.vercel.app/api/cdn?cdn=paperjun.xyz/:version">&nbsp;<img src="https://blessing-skin-manual.vercel.app/api/cdn?cdn=paperjun.xyz/:version&version=4.4.0">
-	<br><br>
-	<div id="gitalk-container"></div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">404-1: Postfile not found.</h4>
+            </div>
+            <div class="modal-body">
+                <p>这个帖子在支持中心网站不可用，因为已经过期。此帖子已在 blog.paperjun.xyz 发布。</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+	</main>
 </body>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 	<script>
-		var gitalk = new Gitalk({
-  clientID: '9e70dc03ea8d69463d66',
-  clientSecret: 'd6288f484b9a1efda0ac1720a80d50e72d642b57',
-  repo: 'replies',
-  owner: 'RainnyYing',
-  admin: ['RainnyYing'],
-  id: location.pathname,      // Ensure uniqueness and length less than 50
-  distractionFreeMode: false  // Facebook-like distraction free mode
-})
-
-gitalk.render('gitalk-container')
+$('#myModal').modal(options)
 	</script>
 </html>
